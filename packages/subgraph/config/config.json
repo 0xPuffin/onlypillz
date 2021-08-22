@@ -1,0 +1,13 @@
+{
+  "DeFiFacetAddress": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "DiamondAddress": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+  "DiamondCutFacetAddress": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+  "BookingFactoryFacetAddress": "0x19185aFF4873BD8B6Dec8B442aF4DA77c21e18F5",
+  "BlackholeAddress": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "GreenholeAddress": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+  "UBIAddress": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+  "BeniesAddress": "0x0DCd1Bf9A1b36cE34237eEaFef220932846BCD82",
+  "FundingRequestFactoryFacetAddress": "0xB7f8BC63BbcaD18155201308C8f3540b07f84F5e",
+  "RaiseFactoryFacetAddress": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+  "PillzAddress": "0x0d2F9115fc4461a7D16542c8f319A364F5d330bc"
+}
