@@ -30,33 +30,8 @@ const main = async () => {
     console.log(selectors);
     return selectors 
   }
-  const Pillz = await deploy("Pillz") // <-- dia in constructor args like line 19 vvvv
+  const Pillz = await deploy("Pillz") 
  
-  //const raiseFactoryFacet = await deploy("RaiseFactoryFacet") // <-- dia in constructor args like line 19 vvvv
-  //const diamondCutFacet = await deploy("DiamondCutFacet") // <-- add in constructor args like line 19 vvvv
- //const govToken = await deploy("Benies", ["BENIES", "LTG"]) // <-- add in constructor args like line 19 vvvv
- //const oneToOnePricing = await deploy("OneToOnePricing");
-// const growingPricing = await deploy("GrowingPricing");
- // initial version of the defi and diamond cut facet after deploying the initial version of these contracts feel free to comment line 37 - 40 and line 34 and make changes to the defi facet contract and deploy alone and upgrade the diamond through ui
- // diamonf cut params include facet address, action and function signatures
- /* async function deployFacets (...facets) {
-  const instances = []
-  for (let facet of facets) {
-    let constructorArgs = []
-    if (Array.isArray(facet)) {
-      ;[facet, constructorArgs] = facet
-    }
-    const factory = await ethers.getContractFactory(facet)
-    const facetInstance = await factory.deploy(...constructorArgs)
-    await facetInstance.deployed()
-
-    const tx = facetInstance.deployTransaction
-    const receipt = await tx.wait()
-    instances.push(facetInstance)
-  }
-  return instances
-} */
-
 
 function getSignatures (contract) {
   return Object.keys(contract.interface.functions)
@@ -67,53 +42,9 @@ function getSignatures (contract) {
 
 const accounts = await ethers.getSigners()
 const ownerAddress = await accounts[0].getAddress()
-
-//console.log(`gov token is ${govToken}`);
-//console.log(govToken.address);
-
- 
- /* const diamondCutParams = [
-    [diamondCutFacet.address, FacetCutAction.Add, [ '0x1f931c1c' ]],
-    [bookingFactoryFacet.address, FacetCutAction.Add, []]
-  ]
-  // eslint-disable-next-line no-unused-vars
-  const deployedDiamond = await deploy("Diamond", [diamondCutParams])  */
 }
 
-  //const secondContract = await deploy("SecondContract")
-
-  // const exampleToken = await deploy("ExampleToken")
-  // const examplePriceOracle = await deploy("ExamplePriceOracle")
-  // const smartContractWallet = await deploy("SmartContractWallet",[exampleToken.address,examplePriceOracle.address])
-
-
-
-  /*
-  //If you want to send value to an address from the deployer
-  const deployerWallet = ethers.provider.getSigner()
-  await deployerWallet.sendTransaction({
-    to: "0x34aA3F359A9D614239015126635CE7732c18fDF3",
-    value: ethers.utils.parseEther("0.001")
-  })
-  */
-
-
-  /*
-  //If you want to send some ETH to a contract on deploy (make your constructor payable!)
-  const yourContract = await deploy("YourContract", [], {
-  value: ethers.utils.parseEther("0.05")
-  });
-  */
-
-
-  /*
-  //If you want to link a library into your contract:
-  // reference: https://github.com/austintgriffith/scaffold-eth/blob/using-libraries-example/packages/hardhat/scripts/deploy.js#L19
-  const yourContract = await deploy("YourContract", [], {}, {
-   LibraryName: **LibraryAddress**
-  });
-  */
-
+ 
 
   console.log(
     " 💾  Artifacts (address, abi, and args) saved to: ",
